@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--
+    ================================================
+    MELT AND MORE BAKERY - Pure HTML Version
+    ================================================
+    Run this file directly in any browser (offline)
+    No server / PHP required for this file.
+    
+    For FULL functionality (ordering, admin panel):
+    Use XAMPP and run index.php instead.
+    Import database.sql in phpMyAdmin first.
+    ================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melt and More - Homemade Cakes & Bakery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Extra styles for HTML-only version */
+        .html-notice {
+            background: linear-gradient(135deg, #45b8ac, #87ceeb);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .html-notice a { color: #fff; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<!-- NOTICE BAR (HTML-only version) -->
+<div class="html-notice">
+    📄 Ye HTML-only version hai (offline). Full features ke liye XAMPP mein
+    <a href="index.php">index.php</a> run karein aur database.sql import karein.
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <span>📍 Fatehsher, Sahiwal | <a href="mailto:meltandmore@gmail.com">meltandmore@gmail.com</a></span>
+    <span>📞 <a href="tel:+923001234567">+92 300 1234567</a> &nbsp;|&nbsp; Free delivery on orders above Rs. 2000</span>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <div class="logo-circle">
+                <div class="logo-title">Melt&More</div>
+                <div class="logo-sub">SWEET BAKERY</div>
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li>
+                <a href="#menu">Menu ▾</a>
+                <div class="dropdown-menu">
+                    <a href="#menu">Occasion Cakes</a>
+                    <a href="#menu">Cupcakes</a>
+                    <a href="#menu">Desserts</a>
+                    <a href="#menu">Sab Products</a>
+                </div>
+            </li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#order" class="nav-admin-btn">Order Now 🎂</a></li>
+        </ul>
+
+        <button class="mobile-menu-btn">☰</button>
+    </div>
+    <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#order">Order Now</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Welcome to Melt and More</h1>
+            <p>Homemade cakes, cupcakes aur desserts — har mouqay ke liye. Pyaar aur passion se banayi gayi har cheez. Since March 2026.</p>
+            <div class="hero-btns">
+                <a href="#order" class="btn-primary">Order Karein 🎂</a>
+                <a href="#menu" class="btn-outline">Menu Dekhein</a>
+            </div>
+        </div>
+        <div class="hero-image-wrap">
+            <div class="hero-img-card">
+                <img src="images/cupcake-hero.png" alt="Melt and More Cupcake">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WAVE DIVIDER -->
+<div class="wave-divider">
+    <svg viewBox="0 0 1200 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="#3d2314"/>
+    </svg>
+</div>
+
+<!-- FEATURES SECTION -->
+<section class="features-section">
+    <div class="inner">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon"><span>👑</span></div>
+                <h3>Tradition</h3>
+                <p>Har cake old-fashioned homemade recipes se banayi jaati hai. Sab kuch fresh aur handmade hota hai.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><span>⭐</span></div>
+                <h3>Quality</h3>
+                <p>Sirf premium quality ingredients use kiye jatay hain. No artificial flavors, no shortcuts — sirf pure goodness.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><span>🎨</span></div>
+                <h3>Creativity</h3>
+                <p>Har order unique hota hai. Custom designs, flavors aur decorations apni marzi ke mutabiq.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><span>🧁</span></div>
+                <h3>Passion</h3>
+                <p>Baking sirf ek kaam nahi — ye hamare dil ki awaaz hai. Har piece mein pyaar dala jaata hai.</p>
+            </div>
+        </div>
+        <div class="know-btn-wrap">
+            <a href="#about" class="know-btn">Know Us Better →</a>
+        </div>
+    </div>
+</section>
+
+<!-- WAVE DIVIDER (reverse) -->
+<div class="wave-divider" style="transform:scaleY(-1);background:#fff;">
+    <svg viewBox="0 0 1200 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="#3d2314"/>
+    </svg>
+</div>
+
+<!-- PRICING SECTION -->
+<section class="pricing-section" id="menu">
+    <div class="section-header">
+        <h2>Hamari Prices</h2>
+        <div class="divider"></div>
+        <p>Sab se mazedaar cakes, sab se maqool damon mein</p>
+    </div>
+    <div class="pricing-grid">
+
+        <div class="price-card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"
+                class="price-card-donut" alt="Occasion Cake">
+            <h3>Occasion Cakes</h3>
+            <div class="price-amount">Rs. <span>1400</span></div>
+            <div class="price-label">1 POUND CAKE</div>
+            <ul class="price-features">
+                <li>Vanilla, Chocolate ya Red Velvet</li>
+                <li>Fresh Cream Frosting</li>
+                <li>Custom Message Free</li>
+                <li>Same Day Available</li>
+            </ul>
+            <a href="#order" class="order-btn">Order Now</a>
+        </div>
+
+        <div class="price-card">
+            <img src="images/cupcake-hero.png"
+                class="price-card-donut" alt="Cupcakes">
+            <h3>Cupcakes</h3>
+            <div class="price-amount">Rs. <span>1000</span></div>
+            <div class="price-label">6 PIECES</div>
+            <ul class="price-features">
+                <li>Mix Flavors Available</li>
+                <li>Buttercream Frosting</li>
+                <li>Fresh Baked Daily</li>
+                <li>Gift Packaging</li>
+            </ul>
+            <a href="#order" class="order-btn">Order Now</a>
+        </div>
+
+        <div class="price-card featured" style="position:relative;">
+            <div class="best-badge">Best</div>
+            <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=200&h=200&fit=crop"
+                class="price-card-donut" alt="2 Pound Cake">
+            <h3>2 Pound Cake</h3>
+            <div class="price-amount">Rs. <span>2400</span></div>
+            <div class="price-label">2 POUND CAKE</div>
+            <ul class="price-features">
+                <li>Serves 10-12 People</li>
+                <li>Custom Design</li>
+                <li>Fondant ya Cream</li>
+                <li>Free Candles</li>
+            </ul>
+            <a href="#order" class="order-btn">Order Now</a>
+        </div>
+
+        <div class="price-card">
+            <img src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=200&h=200&fit=crop"
+                class="price-card-donut" alt="Chocolate Mousse">
+            <h3>Choc Mousse</h3>
+            <div class="price-amount">Rs. <span>350</span></div>
+            <div class="price-label">1 CUP</div>
+            <ul class="price-features">
+                <li>Premium Dark Chocolate</li>
+                <li>Creamy Texture</li>
+                <li>Fresh Made Daily</li>
+                <li>Topping Options</li>
+            </ul>
+            <a href="#order" class="order-btn">Order Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="gallery-section">
+    <div class="section-header">
+        <h2>Hamari Gallery</h2>
+        <div class="divider"></div>
+        <p>Dekho hamare cakes ka jaadu</p>
+    </div>
+    <div class="gallery-controls" style="max-width:800px;margin:0 auto 40px;">
+        <input type="text" class="gallery-search" placeholder="Cake search karein...">
+        <button class="gallery-btn-search"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=500&h=350&fit=crop" alt="Red Velvet Cake">
+            <div class="gallery-item-info"><h4>Red Velvet Cake</h4><p>By Malayika</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/cupcake-hero.png" alt="Cupcakes" style="object-fit:cover;height:220px;width:100%;">
+            <div class="gallery-item-info"><h4>Flower Cupcakes</h4><p>By Malayika</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&h=350&fit=crop" alt="Cheesecake">
+            <div class="gallery-item-info"><h4>New York Cheesecake</h4><p>By Malayika</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=350&fit=crop" alt="Birthday Cake">
+            <div class="gallery-item-info"><h4>Birthday Cake</h4><p>By Malayika</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=500&h=350&fit=crop" alt="Chocolate Cake">
+            <div class="gallery-item-info"><h4>Chocolate Drip Cake</h4><p>By Malayika</p></div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1559620192-032c4bc4674e?w=500&h=350&fit=crop" alt="Black Forest">
+            <div class="gallery-item-info"><h4>Black Forest Cake</h4><p>By Malayika</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- MISSION SECTION (Light Blue instead of Pink) -->
+<section class="mission-section">
+    <div class="inner">
+        <div class="section-header">
+            <h2>Our Mission</h2>
+            <div class="divider"></div>
+            <p>Har ghar mein khushi, har mouqay mein mithaayi — yahi hamaari khawahish hai.</p>
+        </div>
+        <div class="mission-grid">
+            <div class="mission-item">
+                <div class="mission-icon"><span>🏆</span></div>
+                <h3>High Standards</h3>
+                <p>Sirf behtereen quality ingredients use karte hain. Har cake mein 100% mehnat aur care hoti hai.</p>
+            </div>
+            <div class="mission-item">
+                <div class="mission-icon"><span>💪</span></div>
+                <h3>Work Tirelessly</h3>
+                <p>Subah se shaam tak hum kaam karte hain taake aapko waqt par best cake mil sake.</p>
+            </div>
+            <div class="mission-item">
+                <div class="mission-icon"><span>🌱</span></div>
+                <h3>Fresh Always</h3>
+                <p>Sab kuch fresh order par banaaya jaata hai. No pre-made, no stale — sirf fresh goodness.</p>
+            </div>
+            <div class="mission-item">
+                <div class="mission-icon"><span>❤️</span></div>
+                <h3>Made with Love</h3>
+                <p>Baking is our passion. Har item mein pyaar aur dedication shamil hoti hai.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS (Light Blue instead of Pink) -->
+<section class="testimonials-section">
+    <div class="section-header">
+        <h2>Clients Say</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="testimonial-card">
+        <div class="testimonial-avatar-emoji" style="font-size:60px;margin-bottom:15px;">👩</div>
+        <div class="testimonial-text">"Melt and More ka chocolate cake ek dum kamaal tha! Mere birthday pe sab ny taste kiya aur bohat pasand kiya. Malayika ki baking skills zabardast hain!"</div>
+        <div class="testimonial-name">Ayesha Khan</div>
+        <div class="testimonial-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section" id="about">
+    <div class="about-inner">
+        <div class="about-img-wrap">
+            <img src="images/cupcake-hero.png" alt="Melt and More" class="about-img-main">
+            <div class="about-badge">
+                <strong>2026</strong>
+                Since March
+            </div>
+        </div>
+        <div class="about-text">
+            <h2>Hamari Kahani</h2>
+            <p class="founded">🎂 Founded March 2026 — Homemade Bakery, Pakistan</p>
+
+            <p>Melt and More ki shuruwat ek student ki story hai — ek jawaan larki jis ne apne ghar ki kitchen mein apna sapna poora kiya. March 2026 mein, jab sirf ek bowl, ek hand mixer, aur dil mein baking ka junoon tha, tab is bakery ne apna pehla qadam rakha.</p>
+
+            <p>Yahan sab kuch homemade hai. Fresh ingredients, clean kitchen, real love — aur ek promise ke har cake mein hamare dil ka hissa shamil hoga.</p>
+
+            <div class="about-team">
+                <h4>Hamari Team 👩‍🍳</h4>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="team-member-icon">👩</div>
+                        <div class="team-member-info">
+                            <strong>Malayika Tahir</strong>
+                            <span>Owner & Head Baker</span>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-icon">👩‍💻</div>
+                        <div class="team-member-info">
+                            <strong>Malayika Tahir & Mahnoor</strong>
+                            <span>Website Developers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SIMPLE ORDER FORM (HTML only - no DB) -->
+<section class="order-section" id="order">
+    <div class="section-header">
+        <h2>Order Karein 🎂</h2>
+        <div class="divider"></div>
+        <p>Apna order WhatsApp par send karein ya form bharein</p>
+    </div>
+    <div class="order-form-wrap">
+        <div style="background:#d0eaf7;border-radius:12px;padding:20px;margin-bottom:25px;text-align:center;">
+            <p style="font-weight:700;color:#3d2314;margin-bottom:8px;">💬 Quick Order via WhatsApp</p>
+            <a href="https://wa.me/923001234567?text=Assalamu%20Alaikum!%20Mujhe%20Melt%20and%20More%20se%20order%20karna%20hai."
+               class="btn-primary" style="display:inline-block;" target="_blank">
+                WhatsApp par Order Karein
+            </a>
+        </div>
+
+        <p style="text-align:center;color:#999;margin-bottom:20px;font-weight:700;">— YA —</p>
+
+        <form onsubmit="submitHTMLOrder(event)">
+            <div class="form-group">
+                <label>Aapka Naam *</label>
+                <input type="text" id="h_name" placeholder="Poora naam" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" id="h_phone" placeholder="+92 300 xxxxxx" required>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="h_city" placeholder="Aapka city">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Order Details *</label>
+                <select id="h_item">
+                    <option value="1 Pound Cake - Rs.1400">1 Pound Cake — Rs. 1,400</option>
+                    <option value="2 Pound Cake - Rs.2400">2 Pound Cake — Rs. 2,400</option>
+                    <option value="Cupcakes 6pcs - Rs.1000">Cupcakes (6 pieces) — Rs. 1,000</option>
+                    <option value="Chocolate Mousse - Rs.350">Chocolate Mousse (1 cup) — Rs. 350</option>
+                    <option value="Custom Order">Custom Order — Contact karein</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Special Request</label>
+                <textarea id="h_notes" placeholder="Koi khaas design, message ya flavor..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;font-size:16px;padding:15px;border:none;cursor:pointer;font-family:inherit;">
+                📱 WhatsApp par Send Karein
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section style="padding:60px 30px;background:#fafcfc;" id="contact">
+    <div class="contact-grid" style="max-width:1100px;margin:0 auto;">
+        <div class="contact-info">
+            <h3>Hum Se Baat Karein 💬</h3>
+            <p style="color:#777;margin-bottom:25px;">Koi bhi sawaal, order inquiry, ya custom cake — hum yahan hain!</p>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                <div><h4>WhatsApp</h4><p>+92 300 1234567</p></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div><h4>Email</h4><p>meltandmore@gmail.com</p></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                <div><h4>Instagram</h4><p>@meltandmore.pk</p></div>
+            </div>
+        </div>
+        <div style="background:#fff;padding:30px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,0.06);">
+            <h3 style="font-family:'Dancing Script',cursive;font-size:30px;color:#3d2314;margin-bottom:20px;">Price List 💰</h3>
+            <table style="width:100%;border-collapse:collapse;">
+                <tr style="border-bottom:2px solid #f0f0f0;">
+                    <th style="text-align:left;padding:12px 0;color:#3d2314;">Item</th>
+                    <th style="text-align:right;padding:12px 0;color:#3d2314;">Price</th>
+                </tr>
+                <tr style="border-bottom:1px solid #f8f8f8;">
+                    <td style="padding:12px 0;color:#555;">1 Pound Cake (Vanilla/Chocolate/Red Velvet)</td>
+                    <td style="text-align:right;font-weight:700;color:#45b8ac;">Rs. 1,400</td>
+                </tr>
+                <tr style="border-bottom:1px solid #f8f8f8;">
+                    <td style="padding:12px 0;color:#555;">2 Pound Cake (Any Flavor)</td>
+                    <td style="text-align:right;font-weight:700;color:#45b8ac;">Rs. 2,400</td>
+                </tr>
+                <tr style="border-bottom:1px solid #f8f8f8;">
+                    <td style="padding:12px 0;color:#555;">Cupcakes — 6 Pieces</td>
+                    <td style="text-align:right;font-weight:700;color:#45b8ac;">Rs. 1,000</td>
+                </tr>
+                <tr style="border-bottom:1px solid #f8f8f8;">
+                    <td style="padding:12px 0;color:#555;">Chocolate Mousse — 1 Cup</td>
+                    <td style="text-align:right;font-weight:700;color:#45b8ac;">Rs. 350</td>
+                </tr>
+                <tr style="border-bottom:1px solid #f8f8f8;">
+                    <td style="padding:12px 0;color:#555;">Custom Cakes — Price varies</td>
+                    <td style="text-align:right;font-weight:700;color:#3d2314;">Contact Us</td>
+                </tr>
+            </table>
+            <p style="color:#999;font-size:12px;margin-top:15px;">* Prices subject to change. Delivery charges may apply.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<div class="wave-divider" style="background:#fafcfc;">
+    <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C150,60 350,0 600,30 C850,60 1050,0 1200,30 L1200,60 L0,60 Z" fill="#3d2314"/>
+    </svg>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="footer-divider"></div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/923001234567" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="color:rgba(255,255,255,0.5);margin-top:20px;font-size:13px;">
+                Instagram: @meltandmore.pk
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <div class="footer-logo-circle">
+                <div class="footer-logo-title">Melt&More</div>
+                <div class="footer-logo-sub">SWEET BAKERY</div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Get Sweet News</h4>
+            <div class="footer-divider"></div>
+            <p style="color:rgba(255,255,255,0.5);font-size:14px;margin-bottom:15px;">Subscribe karein nayi recipes aur offers ke liye</p>
+            <div class="newsletter-input-wrap">
+                <input type="email" class="newsletter-input" placeholder="Apna email...">
+                <button class="newsletter-btn" onclick="alert('Shukriya! Hum jald aap se raabta karein ge.')">Subscribe</button>
+            </div>
+            <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:15px;">
+                📍 Pakistan<br>
+                📞 +92 300 1234567<br>
+                ✉️ meltandmore@gmail.com
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        Melt and More — Homemade Cakes & Bakery | Founded March 2026 by Malayika Tahir |
+        Developed by Malayika Tahir & Mahnoor
+    </div>
+</footer>
+
+<button id="backToTop" title="Top par jaein">↑</button>
+
+<script src="js/main.js"></script>
+<script>
+function submitHTMLOrder(e) {
+    e.preventDefault();
+    var name = document.getElementById('h_name').value;
+    var phone = document.getElementById('h_phone').value;
+    var city = document.getElementById('h_city').value;
+    var item = document.getElementById('h_item').value;
+    var notes = document.getElementById('h_notes').value;
+    var msg = 'Assalamu Alaikum! Mujhe order karna hai:\n\n' +
+        '👤 Naam: ' + name + '\n' +
+        '📞 Phone: ' + phone + '\n' +
+        '📍 City: ' + city + '\n' +
+        '🎂 Item: ' + item + '\n' +
+        '📝 Notes: ' + (notes || 'N/A') + '\n\n' +
+        'Please confirm kar dein. Shukriya!';
+    var url = 'https://wa.me/923001234567?text=' + encodeURIComponent(msg);
+    window.open(url, '_blank');
+}
+</script>
+</body>
+</html>
